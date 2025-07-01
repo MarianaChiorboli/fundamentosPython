@@ -1,10 +1,10 @@
 #Função para imprimir mensagem
 #Parenteses usado, pq pode ter um parametro (nesse caso não tem)
 def welcome ():
-    print("Bem-vindo!")
+    print("Bem-vindo!") #Caso print esteja dentro eu não preciso chamar a função
 
     #Com identação eu continuo dentro da função 
-#welcome()
+welcome()
 
 #Função para calcular a média de notas
 def calculate():
@@ -22,4 +22,14 @@ def calculate():
     return average
 #Em função temos duas possibilidades de saída, o retorno(não é apresentado na tela, dentro da função, apenas gera um retorno) ou o print
 
-print(f"Média final das notas:  {calculate()}")
+print(f"Média final das notas:  {calculate()}") #:.2f - para formataer em duas casas decimais 
+
+# 3 - Função para cadastro de filme 
+def create_movie():
+    name = input ("Digite o nome do filme: \n ")
+    yearLaunch = int(input("Digite o ao de lançamento: \n"))
+    moviePrice = float(input("Digite o preço do filme: \n"))
+    rating = float(input("Digite a nota do filme:  \n"))
+    print(f"{name} ({yearLaunch}) - R$ {moviePrice} ")
+
+create_movie()
